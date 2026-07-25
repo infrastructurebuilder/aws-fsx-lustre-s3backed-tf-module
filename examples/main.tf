@@ -1,12 +1,5 @@
-# aws-fsx-lustre-s3backed-tf-module
-TF Module for building an AWS FSx for Lustre filesystem backed by an S3 bucket
-
-
-## Usage
-
-```hcl
 module "fsx_with_s3" {
-  source = "git::https://github.com/infrastructurebuilder/aws-fsx-lustre-s3backed-tf-module.git"
+  source = "../.." # "git::https://github.com/infrastructurebuilder/aws-fsx-lustre-s3backed-tf-module.git"
 
   vpc_id              = "vpc-0abc123def456"
   subnet_ids          = ["subnet-0abc1234567"]
@@ -19,4 +12,3 @@ module "fsx_with_s3" {
   storage_capacity    = 2400
   deployment_type     = "PERSISTENT_1"
 }
-```
